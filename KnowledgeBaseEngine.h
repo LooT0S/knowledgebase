@@ -10,6 +10,8 @@ class KnowledgeBaseEngine
 private:
 	std::vector<std::string> res;
 	std::vector<std::string> ifthen;
+	int stepFlag = 0;
+	int counter = 0;
 
 public:
 	KnowledgeBaseEngine();
@@ -24,5 +26,6 @@ public:
 	void readBase(std::string PATH);
 	void engine();
 	std::string nextQuestion();
+	std::string getResultVector();
 };
 

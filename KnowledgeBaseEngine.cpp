@@ -74,10 +74,34 @@ int KnowledgeBaseEngine::searchFunc(std::string string)
 
 std::string KnowledgeBaseEngine::nextQuestion()
 {
+	int sizeIFTHEN = ifthen.size();
+	std::string info = ifthen[stepFlag];
+	stepFlag++;
+	
+	if (stepFlag == sizeIFTHEN)
+	{
+		stepFlag = 0;
+	}
 
+	return info;
 }
 
 void KnowledgeBaseEngine::engine()
 {
+	while (counter != ifthen.size())
+	{
+		searchFunc(nextQuestion());
+		++counter;
+	}
+}
 
+std::string KnowledgeBaseEngine::getResultVector()
+{
+	std::string result;
+
+	for (auto& iter : res)
+	{
+		result += iter + " ";
+	}
+	return result;
 }

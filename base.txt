@@ -1,4 +1,4 @@
-IFнно: THENя#, Java, C++;
+IFнно: THENя#, Java, C++
 IFa ti sosesh: THENJS, Java, C++
 IFa ti debil: THENC++
 IFнно: THENя#, Java, C++
